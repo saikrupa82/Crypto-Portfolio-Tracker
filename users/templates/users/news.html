@@ -1,0 +1,175 @@
+
+{% block content %}
+{% load static %} 
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>News - MAJOR</title>
+    <meta property="og:title" content="News - MAJOR" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <style>
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6 {  margin: 0;  padding: 0;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}
+    </style>
+    <style>
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    />
+      <link rel="stylesheet" href="{% static '/css/style.css'%}">
+  </head>
+  <body>
+    <div>
+      <link rel="stylesheet" href="{% static '/css/news.css'%}">
+
+      <div class="news-container">
+        <div class="top-header top-root-class-name">
+          <div class="top-logo"><a href="{% url 'index' %}" style="text-decoration: none;">
+            <svg viewBox="0 0 760.0274285714286 1024" class="top-icon">
+              <path
+                d="M666.857 365.714c7.429 76-24.571 121.714-74.857 147.429 83.429 20 136 69.714 125.714 181.143-13.143 138.857-116 176-263.429 184v145.714h-88v-143.429c-22.286 0-45.714 0-69.714-0.571v144h-88v-145.714c-20.571 0-41.143-0.571-62.286-0.571h-114.286l17.714-104.571c64.571 1.143 63.429 0 63.429 0 24.571 0 31.429-17.714 33.143-29.143v-229.714h9.143c-3.429-0.571-6.857-0.571-9.143-0.571v-164c-3.429-18.286-14.857-38.857-50.857-38.857 0 0 1.143-1.143-63.429 0v-93.714l121.143 0.571c17.714 0 36.571 0 55.429-0.571v-144h88v141.143c23.429-0.571 46.857-1.143 69.714-1.143v-140h88v144c113.143 9.714 202.857 44.571 212.571 148.571zM544 677.143c0-113.143-186.286-96.571-245.714-96.571v193.143c59.429 0 245.714 12.571 245.714-96.571zM503.429 405.143c0-103.429-155.429-88-205.143-88v175.429c49.714 0 205.143 11.429 205.143-87.429z"
+              ></path>
+            </svg>
+            <span class="top-logoname"><span>Crypto Portfolio</span></span></a>
+          </div>
+          <div class="top-nav">
+            <span class="top-portfolio"><span>                
+              <a href="{% url 'users-profile' %}" class="home-portfolio">Profile</a>
+              
+            
+            </span></span>
+            <span class="top-news"><span>News</span></span>
+            <span>
+            <a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a></span>
+            <div class="top-user">
+              <span class="top-username">
+                <span>{{ request.user.username }}</span>
+                <span class="top-text1"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="news-container-news-container">
+          <div class="news-container-container">
+            <span class="news-container-text"><span>Crypto News</span></span>
+            <span class="news-container-text01">
+              <span>Get the latest crypto news from the best news sources</span>
+            </span>
+          </div>
+          <div class="news-card-blog-post-card">
+            <img
+              alt="image"
+              src="https://images.unsplash.com/photo-1638913972706-91fc2cb57152?ixid=Mnw5MTMyMXwxfDF8c2VhcmNofDF8fGNyeXB0b3xlbnwwfHx8fDE2NDY5ODMzOTk&ixlib=rb-1.2.1&w=1400"
+              image_src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;h=1000"
+              class="news-card-image"
+            />
+            <div class="news-card-newsinfo">
+              <h1 class="news-card-text">
+                <span>Ethereum Restarts Decline, Can Bulls Save The Day</span>
+              </h1>
+              <span class="news-card-text1">
+                <span>
+                  Ethereum extended decline below the $2,600 support zone
+                  against the US Dollar. ETH price could even retest $2,445, ...
+                </span>
+              </span>
+              <span class="news-card-readmore"><span>Read More -></span></span>
+              <span class="news-card-text2"><span>3 days ago</span></span>
+            </div>
+          </div>
+          <div class="news-container-blog-post-card">
+            <img
+              alt="image"
+              src="https://images.unsplash.com/photo-1622630998477-20aa696ecb05?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDEyfHxjcnlwdG98ZW58MHx8fHwxNjQ2OTgzMzk5&ixlib=rb-1.2.1&w=1400"
+              image_src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;h=1000"
+              class="news-container-image"
+            />
+            <div class="news-container-container1">
+              <h1 class="news-container-text02">
+                <span>
+                  Bitcoin, Ethereum, Stacks, and BitTorrent (New) Daily Price
+                  Analyses – 10 March Roundup
+                </span>
+              </h1>
+              <span class="news-container-text03">
+                <span>
+                  TL;DR Breakdown The recession in the global crypto market
+                  continues as it sheds 4.42% in 24 hours. Bitcoin, affecte...
+                </span>
+              </span>
+              <div class="news-container-container2">
+                <div class="news-container-profile"></div>
+                <span class="news-container-text04">
+                  <span>Read More -></span>
+                </span>
+              </div>
+              <div class="news-container-container3">
+                <span class="news-container-text05">
+                  <span>3 days ago</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="news-container-blog-post-card1">
+            <img
+              alt="image"
+              src="https://images.unsplash.com/photo-1605792657660-596af9009e82?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDR8fGNyeXB0b3xlbnwwfHx8fDE2NDY5ODMzOTk&ixlib=rb-1.2.1&w=1400"
+              image_src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDd8fHBvcnRyYWl0fGVufDB8fHx8MTYyNjM3ODk3Mg&amp;ixlib=rb-1.2.1&amp;h=1000"
+              class="news-container-image1"
+            />
+            <div class="news-container-container4">
+              <h1 class="news-container-text06">
+                <span>
+                  Bitcoin and Ethereum Increased Losses, ZEC and STX Rally
+                </span>
+              </h1>
+              <span class="news-container-text07">
+                <span>
+                  Bitcoin price moved into a bearish zone below the USD 40,000
+                  level. BTC even extended decline below the USD 38,500 ...
+                </span>
+              </span>
+              <div class="news-container-container5">
+                <div class="news-container-profile1"></div>
+                <span class="news-container-text08">
+                  <span>Read More -></span>
+                </span>
+              </div>
+              <div class="news-container-container6">
+                <span class="news-container-text09">
+                  <span>3 days ago</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+{% endblock %}
